@@ -1,11 +1,20 @@
 /* Global */
+body {
+    background-color: #333C4A;
+}
 
 .font-title {
-    font-family: Monserrat;
+    font-family: 'Playfair+Display', serif;
+    color: #BDC3C7;
 }
 
 .regular {
     font-family: Lato;
+    color: #BDC3C7;
+}
+
+.text-gold {
+    color: #B87333;
 }
 
 /* header */
