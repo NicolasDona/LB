@@ -3,6 +3,10 @@ body {
     background-color: #333C4A;
 }
 
+td tr {
+    background-color: #333C4A;
+}
+
 .font-title {
     font-family: 'Playfair+Display', serif;
     color: #BDC3C7;
@@ -22,3 +26,19 @@ body {
 /* main */
 
 /* footer */
+footer {
+    background-color: #124559;
+}
+/* Combinaison des classes (avec text-decoration-none) pour créer des liens qui sont soulignés au survol.
+/* ATTENTION: j'ai placé !important dans mon style (risque d'ecrasement d'autres styles) */
+.hover-underline:hover {
+    text-decoration: underline !important;
+}
+.letter-sp {
+    letter-spacing: 2px;
+}
+.footer-icons {
+    font-size: 45px;
+    color: #BDC3C7;
+    letter-spacing: 20px;
+}
