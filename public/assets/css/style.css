@@ -6,7 +6,12 @@ body {
 td tr {
     background-color: #333C4A;
 }
-
+hr {
+    color: #BDC3C7;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .font-title {
     font-family: 'Playfair+Display', serif;
     color: #BDC3C7;
@@ -21,9 +26,26 @@ td tr {
     color: #B87333;
 }
 
+/* fin de Global */
+
 /* header */
+/* fin de header */
 
 /* main */
+/* début section Accueil */
+.title-resize {
+    font-size: 485%;
+}
+.title-resize4 {
+    font-size: 300%;
+}
+.text-center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60vh; /* 100% de la hauteur de la vue (viewport) */
+}
+/* fin section Accueil */
 
 /* footer */
 footer {
