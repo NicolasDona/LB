@@ -1,24 +1,83 @@
-/* Global */
-body {
-    background-color: #333C4A;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un salon de coiffure moderne, professionnel et qui répond à toutes vos demandes esthétiques, Jusqu'au moindre petits cheveux ou poilstitle">
+    <meta name="keywords" content="coiffure, coiffeur, coiffeur Oise, coiffeur à proximité, rapide, moderne, homme, femme, enfant, épilation, esthétique, salon, barbier, barber shop, coloration, lissage, RDV, rendez-vous">
+    <meta name="author" content="L B Coiffure">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Font Playfair Display class="font-title"  pour les titres -->
+    <!-- font Lato class="regular" pour l'écriture réguilère -->
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="./public/assets/framework/bootstrap.min.css">
+    <!-- style CSS perso -->
+    <link rel="stylesheet" href="./public/assets/css/style.css">
+    <title>LB Coiffure</title>
+</head>
+<body>
 
-.font-title {
-    font-family: 'Playfair+Display', serif;
-    color: #BDC3C7;
-}
+    <footer>
+    <!-- Block Gauche -->
+    <div class="container p-4">
+        <div class="row letter-sp">
+        <div class="col-lg-6 col-md-12 mb-4">
+            <h5 class="mb-3 letter-sp font-title fw-bold">LB Coiffure</h5>
+            <p class="regular">
+                Votre salon de proximité qui répond à toutes vos attentes. 
+                Je suis disponible pour répondre à toutes vos demandes personnalisées.
+                Contactez-moi.
+            </p>
+            <a href="https://www.facebook.com/profile.php?id=100063458413249" target="_blank"><i class="fa-brands fa-facebook footer-icons" title="Facebook"></i></a>
+            <a href="https://www.instagram.com/lbcoiffure60/" target="_blank"><i class="fa-brands fa-instagram footer-icons" title="Instagram"></i></a>
+        </div>
+        <!-- Partie centrale -->
+        <div class="col-lg-3 col-md-6 letter-sp">
+            <h5 class="mb-3 letter-sp font-title fw-bold">Venir au salon</h5>
+            <ul class="list-unstyled mb-0">
+            <li class="mb-1 regular">
+                <p>265 Rue Albert Martin,<br>60250 Bury</p>
+            </li>
+            <li class="mb-1">
+                <a href="https://maps.app.goo.gl/Cm3oM6qB7F58ya2E9" target="_blank" title="lien vers le plan de Google maps" class="regular text-decoration-none hover-underline fw-bold">Plans</a>
+            </li>
+            <li class="mb-1">
+                <a href="#!" title="lien vers la grille de tarifs" class="regular text-decoration-none hover-underline fw-bold">Tarifs</a>
+            </li>
+            <li>
+                <a href="tel:0344565269" title="Lien du numéro de téléphone" class="regular text-decoration-none hover-underline fw-bold">03 44 56 52 69</a>
+            </li>
+            </ul>
+        </div>
+        <!-- Partie Droite  -->
+        <div class="col-lg-3 col-md-6 mb-4 letter-sp">
+            <h5 class="mb-1 letter-sp font-title fw-bold">Heures d'ouvertures</h5>
+            <table class="regular letter-sp">
+            <tbody>
+                <tr>
+                <td>Mar - jeu:</td>
+                <td>9h- 18H</td>
+                </tr>
+                <tr>
+                <td>ven - sam:</td>
+                <td>9H - 19H</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        </div>
+    </div>
+    <!-- Mentions Légales -->
+    <div class="text-center p-3 regular letter-sp">
+        <a class="regular text-decoration-none hover-underline fw-bold" href="#!">Mentions légales</a> © 2023 
+        <a class="regular text-decoration-none hover-underline fw-bold" href="index.html"> LB Coiffure</a>
+    </div>
+    </footer>
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/a1eac4c766.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./public/assets/framework/bootstrap.min.js"></script>
 
-.regular {
-    font-family: Lato;
-    color: #BDC3C7;
-}
-
-.text-gold {
-    color: #B87333;
-}
-
-/* header */
-
-/* main */
-
-/* footer */
+</body>
+</html>
