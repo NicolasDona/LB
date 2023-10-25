@@ -29,6 +29,10 @@ hr {
 /* fin de Global */
 
 /* header */
+.navbar-nav .nav-item {
+    margin-right: 40px; /* Ajustez cette valeur selon vos besoins */
+}
+
 /* fin de header */
 
 /* main */
