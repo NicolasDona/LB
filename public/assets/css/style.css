@@ -1,17 +1,21 @@
 /* Global */
 body {
     background-color: #333C4A;
+    margin: 0px;
+    padding: 0px;
 }
 
 td tr {
     background-color: #333C4A;
 }
+
 hr {
     color: #BDC3C7;
     width: 15%;
     margin-left: auto;
     margin-right: auto;
 }
+
 .font-title {
     font-family: 'Playfair+Display', serif;
     color: #BDC3C7;
@@ -24,6 +28,12 @@ hr {
 
 .text-gold {
     color: #B87333;
+}
+
+/* Combinaison des classes (avec text-decoration-none) pour créer des liens qui sont soulignés au survol.
+/* ATTENTION: j'ai placé !important dans mon style (risque d'ecrasement d'autres styles) */
+.hover-underline:hover {
+    text-decoration: underline !important;
 }
 
 /* fin de Global */
@@ -39,39 +49,58 @@ hr {
 }
 
 .bar-logo {
-    width: 140px;
+    width: 100px;
+}
+
+.dropdown-menu {
+    background-color: #333C4A;
+    /* border-style: none; */
+    border-color: #BDC3C7;
+}
+
+.dropdown-item {
+    color: #BDC3C7;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #BDC3C7;
 }
 
 /* fin de header */
 
 /* main */
+#dash-options {
+list-style-type: none;
+}
+
 /* début section Accueil */
 .title-resize {
     font-size: 485%;
 }
+
 .title-resize4 {
     font-size: 300%;
 }
+
 .text-center-vertical {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 60vh; /* 100% de la hauteur de la vue (viewport) */
+    height: 60vh;
+    /* 100% de la hauteur de la vue (viewport) */
 }
+
 /* fin section Accueil */
 
 /* footer */
 footer {
     background-color: #333C4A;
 }
-/* Combinaison des classes (avec text-decoration-none) pour créer des liens qui sont soulignés au survol.
-/* ATTENTION: j'ai placé !important dans mon style (risque d'ecrasement d'autres styles) */
-.hover-underline:hover {
-    text-decoration: underline !important;
-}
+
 .letter-sp {
     letter-spacing: 2px;
 }
+
 .footer-icons {
     font-size: 45px;
     color: #BDC3C7;
