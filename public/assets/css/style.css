@@ -30,7 +30,16 @@ hr {
 
 /* header */
 .navbar-nav .nav-item {
-    margin-right: 40px; /* Ajustez cette valeur selon vos besoins */
+    margin-right: 40px;
+}
+
+.mob-menu {
+    border-color: #BDC3C7;
+    color: #BDC3C7;
+}
+
+.bar-logo {
+    width: 140px;
 }
 
 /* fin de header */
