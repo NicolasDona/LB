@@ -58,7 +58,7 @@ const checkEmail = () => {
 
     if (isValid == false) { // if (!isValid)
         // bordure rouge
-        email.classList.add('border-danger', 'border-3')
+        email.classList.add('regular', 'border-3')
         emailHelp.classList.remove('d-none');
     } else {
         // bordure verte
@@ -71,8 +71,8 @@ const checkEmail = () => {
 const checkPassword = () => {
 
     // Dès qu'une touche est tapée, on reset tous les styles
-    password1.classList.remove('border-danger', 'border-success', 'border-3')
-    password2.classList.remove('border-danger', 'border-success', 'border-3')
+    password1.classList.remove('regular', 'border-success', 'border-3')
+    password2.classList.remove('regular', 'border-success', 'border-3')
     
     light.classList.add('d-none')
     medium.classList.add('d-none')
@@ -84,12 +84,12 @@ const checkPassword = () => {
     }
 
     if (password1.value !== password2.value) {
-        password1.classList.add('border-danger', 'border-3')
-        password2.classList.add('border-danger', 'border-3')
+        password1.classList.add('regular', 'border-3')
+        password2.classList.add('regular', 'border-3')
         password2Help.classList.remove('d-none');
     } else {
-        password1.classList.add('border-success', 'border-3')
-        password2.classList.add('border-success', 'border-3')
+        password1.classList.add('regular', 'border-3')
+        password2.classList.add('regular', 'border-3')
         password2Help.classList.add('d-none');
     }
 
