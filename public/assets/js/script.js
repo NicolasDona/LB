@@ -8,7 +8,7 @@ const rightColumn = document.querySelector('.switch-link');
 links.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
-        // Récupérez l'ID du lien cliqué
+        // Recup l'ID du lien cliqué
         const linkID = this.id;
         // Switch sur l'ID des liens
         switch (linkID) {
