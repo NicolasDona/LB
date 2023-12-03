@@ -1,0 +1,17 @@
+# Le serveur doit suivre les liens symboliques :
+Options +FollowSymlinks
+
+# Activation du module de réécriture d'URL :
+RewriteEngine on
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+# Sujet avec numéro de page :
+RewriteRule ^accueil.html$                  /controllers/home-ctrl.php
+RewriteRule ^parametre.html$                /controllers/parameters-ctrl.php  
+RewriteRule ^mentionslegales.html$            /controllers/mentions-ctrl.php    
+RewriteRule ^theme\-([a-zA-Z-]+).html$      /controllers/pages-ctrl.php?continent=$1
+
+ErrorDocument 404 /404.php
