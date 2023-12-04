@@ -50,7 +50,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page"
-                                href="produits.php">Produits</a>
+                                href="produits-ctrl.php">Produits</a>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" href="rdv-ctrl.php">RDV en ligne</a>
@@ -69,7 +69,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="dashboard.php">Connexion</a>
+                                href="dashboard-ctrl.php">Connexion</a>
                         </li>
                     </ul>
                 </div>

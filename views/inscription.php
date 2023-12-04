@@ -1,18 +1,20 @@
         <h1 class="font-title text-center fw-bold mt-5">INSCRIPTION</h1>
         <div class="row pt-3 mb-5">
             <div class="col-lg-8 offset-lg-2 col-12 pt-5">
-                <form>
+                <form method="POST" id="formUser">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="nom" class="regular">Nom</label>
-                                <input id="nom" class="form-control" type="text" name="" placeholder="Entrer votre nom">
+                                <label for="lastname" class="regular">Nom</label>
+                                <input id="lastname" class="form-control" type="text" name="lastname" value="<?= $lastname ?? ''; ?>" placeholder="Entrer votre nom">
+                                <span class="regular"><?= $error["lastname"] ?? '' ?></span>
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <label for="username" class="form-label regular mb-0">Nom d'utilisateur</label>
-                                    <input type="text" class="form-control border" id="username" name="username" placeholder="Nom d'utilisateur">
+                                    <label for="firstname" class="form-label regular mb-0">Prénom</label>
+                                    <input type="text" class="form-control border" id="firstname" name="firstname" value="<?= $firstname ?? ''; ?>" placeholder="Entrer votre prénom">
                                     <div id="usernameHelp" class="form-text error d-none">Ce nom d'utilisateur n'est pas valide</div>
+                                    <span class="regular"><?= $error["firstname"] ?? '' ?></span>
                                 </div>
                             </div>
                         </div>
@@ -21,7 +23,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="password1" class="form-label regular">Mot de passe</label>
-                                <input type="password" class="form-control" id="password1" placeholder="Entrer votre mot de passe">
+                                <input type="password" class="form-control" id="password1" name="password1" value="<?= $password1 ?? ''; ?>" placeholder="Entrer votre mot de passe">
                                 <div id="nudge">
                                     <span class="badge  regular d-none">Faible</span>
                                     <span class="badge  regular d-none">Moyen</span>
@@ -30,8 +32,9 @@
                             </div>
                             <div class="col-md-6">
                                 <label for="password2" class="form-label regular">Confirmation du mot de passe</label>
-                        <input type="password" class="form-control" id="password2" placeholder="Confirmer votre mot de passe">
-                        <div id="password2Help" class="form-text regular d-none">Les mots de passe doivent correspondre</div>
+                                <input type="password" class="form-control" id="password2" name="password2" value="<?= $password2 ?? ''; ?>" placeholder="Confirmer votre mot de passe">
+                                <div id="password2Help" class="form-text regular d-none">Les mots de passe doivent correspondre</div>
+                                <span class="regular"><?= $error["password"] ?? '' ?></span>
                             </div>
                         </div>
                     </div>
@@ -39,22 +42,22 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="email" class="form-label regular">Email</label>
-                                <input type="email" class="form-control border" id="email" aria-describedby="emailHelp" placeholder="Entrer votre adresse email">
+                                <input type="email" class="form-control border" id="email" name="email" value="<?= $email ?? ''; ?>" aria-describedby="emailHelp" placeholder="Entrer votre adresse email">
                                 <div id="emailHelp" class="form-text error d-none">Cet email n'est pas valide</div>
+                                <span class="regular"><?= $error['email'] ?? '' ?></span>
                             </div>
                             <div class="col-md-6">
-                                <label for="numéro" class="regular mt-2">Numéro de téléphone</label>
-                                <input id="numéro" class="form-control" type="text" name=""
-                                    placeholder="Entrer votre numéro de téléphone">
+                                <label for="phonenumber" class="regular mt-2">Numéro de téléphone</label>
+                                <input id="phonenumber" class="form-control" type="text" name="phonenumber" value="<?= $phonenumber ?? ''; ?>" placeholder="Entrer votre numéro de téléphone">
+                                <span class="regular"><?=$error['phonenumber'] ?? ''?></span>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-12">
-                                <label for="adresse"class="regular">Adresse</label>
-                                <input id="adresse" class="form-control" type="text" name=""
-                                    placeholder="Entrer votre adresse">
+                                <label for="adress" class="regular">Adresse</label>
+                                <input id="adress" class="form-control" type="text" name="adress" value="<?= $adress ?? ''; ?>" placeholder="Entrer votre adresse">
                             </div>
                         </div>
                     </div>
