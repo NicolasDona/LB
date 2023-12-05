@@ -12,11 +12,8 @@ let light = nudge.querySelector('span:nth-child(1)')
 let medium = nudge.querySelector('span:nth-child(2)')
 let strong = nudge.querySelector('span:nth-child(3)')
 
-
-
 const regexUsername = /^[a-zA-Z0-3]{2,30}$/;
 const regexEmail = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9_\-]+\.[a-zA-Z]{2,5}$/
-
 const regexPwdMedium = /^(?=.*[A-Z])(?=.*[0-9]).{8,}$/
 const regexPwdStrong = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[&é"'-]).{8,}$/
 
@@ -102,8 +99,7 @@ const checkPassword = () => {
         light.classList.add('d-none')
         medium.classList.remove('d-none')
         strong.classList.add('d-none')
-    }j
-
+    }
     let nudgeStrong = regexPwdStrong.test(password1.value)
     if (nudgeStrong) {
         light.classList.add('d-none')
@@ -113,7 +109,7 @@ const checkPassword = () => {
 }
 
 // // Création de 2 écouteurs d'évènement à l'appui sur une touche
-username.addEventListener("keyup", checkUsername);
+// username.addEventListener("keyup", checkUsername);
 email.addEventListener("keyup", checkEmail);
 password1.addEventListener("keyup", checkPassword);
 password2.addEventListener("keyup", checkPassword);

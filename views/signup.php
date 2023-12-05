@@ -43,13 +43,13 @@
                             <div class="col-md-6">
                                 <label for="email" class="form-label regular">Email</label>
                                 <input type="email" class="form-control border" id="email" name="email" value="<?= $email ?? ''; ?>" aria-describedby="emailHelp" placeholder="Entrer votre adresse email">
-                                <div id="emailHelp" class="form-text error d-none">Cet email n'est pas valide</div>
+                                <div id="emailHelp" class="form-text error regular d-none">Cet email n'est pas valide</div>
                                 <span class="regular"><?= $error['email'] ?? '' ?></span>
                             </div>
                             <div class="col-md-6">
                                 <label for="phonenumber" class="regular mt-2">Numéro de téléphone</label>
                                 <input id="phonenumber" class="form-control" type="text" name="phonenumber" value="<?= $phonenumber ?? ''; ?>" placeholder="Entrer votre numéro de téléphone">
-                                <span class="regular"><?=$error['phonenumber'] ?? ''?></span>
+                                <span class="regular"><?= $error['phonenumber'] ?? '' ?></span>
                             </div>
                         </div>
                     </div>

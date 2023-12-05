@@ -71,6 +71,7 @@
         crossorigin="anonymous"></script>
             <!-- JS PERSO -->
     <script src="../../public/assets/js/script.js"></script>
+    <script src="/../../../public/assets/js/script.js"></script>
     <script src="../../public/assets/js/reg.js"></script>
 </body>
 

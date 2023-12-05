@@ -18,6 +18,8 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- style CSS perso -->
     <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="/../../../public/assets/css/style.css">
+
     <title>LB Coiffure</title>
 </head>
 
@@ -42,7 +44,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="blog.php">Blog</a></li>
-                                <li><a class="dropdown-item" href="#">Photos</a></li>
+                                <li><a class="dropdown-item" href="photos-ctrl.php">Photos</a></li>
                                 <li><a class="dropdown-item" href="#">Tarifs</a></li>
                                 <li><a class="dropdown-item" href="#">Services</a></li>
                                 <li><a class="dropdown-item" href="#">A propos</a></li>
@@ -65,11 +67,11 @@
                     </ul>
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="inscription-ctrl.php">Inscription</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="signup-ctrl.php">Inscription</a>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="dashboard-ctrl.php">Connexion</a>
+                                href="signin-ctrl.php">Connexion</a>
                         </li>
                     </ul>
                 </div>

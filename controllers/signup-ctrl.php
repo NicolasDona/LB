@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $passwordHash = password_hash($password1, PASSWORD_DEFAULT);
         // Ici, vous pouvez continuer avec l'enregistrement du mot de passe haché
     }
-    //======================== Email : Nettoyage et hashage ============================
+    //======================== Email : Nettoyage et validation ============================
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     if (empty($email)) {
         $error["email"] = "L'adresse mail est obligatoire!!";
@@ -80,7 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+$rootPath = realpath(__DIR__ . '/..'); 
+$scriptPath = $rootPath . '/public/assets/js/script.js';
+var_dump($scriptPath);
 
 include __DIR__ . '/../views/templates/header.php';
-include __DIR__ . '/../views/inscription.php';
+include __DIR__ . '/../views/signup.php';
 include __DIR__ . '/../views/templates/footer.php';
+
