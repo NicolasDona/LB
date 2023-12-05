@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error["inputemail"] = "L'adresse email n'est pas au bon format!!";
         }
     }
-    // ===================== vérification du téléphone =================================
+    // ===================== vérification du numéro de téléphone =================================
     $inputphonenumber = filter_input(INPUT_POST, 'inputphonenumber', FILTER_SANITIZE_SPECIAL_CHARS);
     // On vérifie que ce n'est pas vide
     if (empty($inputphonenumber)) {

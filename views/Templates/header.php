@@ -17,9 +17,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- style CSS perso -->
-    <link rel="stylesheet" href="../../public/assets/css/style.css">
-    <link rel="stylesheet" href="/../../../public/assets/css/style.css">
-
+    <link rel="stylesheet" href="/public/assets/css/style.css">
     <title>LB Coiffure</title>
 </head>
 
@@ -28,8 +26,8 @@
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="main-ctrl.php"><img
-                        class="bar-logo" src="../../public/assets/img/logo.png" alt="Logo du salon"></a>
+                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="/controllers/main-ctrl.php"><img
+                        class="bar-logo" src="/public/assets/img/logo.png" alt="Logo du salon"></a>
                 <button class="navbar-toggler mob-menu" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -44,7 +42,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="blog.php">Blog</a></li>
-                                <li><a class="dropdown-item" href="photos-ctrl.php">Photos</a></li>
+                                <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
                                 <li><a class="dropdown-item" href="#">Tarifs</a></li>
                                 <li><a class="dropdown-item" href="#">Services</a></li>
                                 <li><a class="dropdown-item" href="#">A propos</a></li>
@@ -52,26 +50,26 @@
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page"
-                                href="produits-ctrl.php">Produits</a>
+                                href="/controllers/produits-ctrl.php">Produits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="rdv-ctrl.php">RDV en ligne</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/rdv-ctrl.php">RDV en ligne</a>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="avantages-ctrl.php">Avantages</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/avantages-ctrl.php">Avantages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="contact-ctrl.php">Nous
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/contact-ctrl.php">Nous
                                 contacter</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="signup-ctrl.php">Inscription</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="signin-ctrl.php">Connexion</a>
+                                href="/controllers/signin-ctrl.php">Connexion</a>
                         </li>
                     </ul>
                 </div>

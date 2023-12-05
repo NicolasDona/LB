@@ -70,9 +70,10 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
             <!-- JS PERSO -->
-    <script src="../../public/assets/js/script.js"></script>
-    <script src="/../../../public/assets/js/script.js"></script>
-    <script src="../../public/assets/js/reg.js"></script>
+    <!-- <script src="../../public/assets/js/script.js"></script>
+    <script src="/../../../public/assets/js/script.js"></script> -->
+    <script src="/public/assets/js/script.js"></script>
+    <script src="/public/assets/js/reg.js"></script>
 </body>
 
 </html>

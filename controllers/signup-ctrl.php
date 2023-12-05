@@ -80,9 +80,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-$rootPath = realpath(__DIR__ . '/..'); 
-$scriptPath = $rootPath . '/public/assets/js/script.js';
-var_dump($scriptPath);
 
 include __DIR__ . '/../views/templates/header.php';
 include __DIR__ . '/../views/signup.php';
