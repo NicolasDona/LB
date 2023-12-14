@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Un salon de coiffure moderne, professionnel et qui répond à toutes vos demandes esthétiques, Jusqu'au moindre petits cheveux ou poils">
-    <meta name="keywords"
-        content="coiffure, coiffeur, coiffeur Oise, coiffeur à proximité, rapide, moderne, homme, femme, enfant, épilation, esthétique, salon, barbier, barber shop, coloration, lissage, RDV, rendez-vous">
+    <meta name="description" content="Un salon de coiffure moderne, professionnel et qui répond à toutes vos demandes esthétiques, Jusqu'au moindre petits cheveux ou poils">
     <meta name="author" content="L B Coiffure">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Font Playfair Display class="font-title"  pour les titres -->
     <!-- font Lato class="regular" pour l'écriture régulière -->
-    <!-- Bootstrap 5 -->
+    <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- style CSS perso -->
@@ -41,7 +38,6 @@
                                 Présentation du salon
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="blog.php">Blog</a></li>
                                 <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
                                 <li><a class="dropdown-item" href="#">Tarifs</a></li>
                                 <li><a class="dropdown-item" href="#">Services</a></li>
