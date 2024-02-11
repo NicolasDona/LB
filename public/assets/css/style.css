@@ -143,3 +143,24 @@ footer {
     letter-spacing: 20px;
     margin-left: 0px;
 }
+
+/* Centrer le carousel */
+.custom-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adapter la hauteur comme nécessaire */
+}
+
+.carousel .carousel-inner .carousel-item img {
+    width: 75%; /* Ajuster la largeur comme nécessaire */
+    margin: auto; /* Important pour le centrage horizontal des images */
+}
+
+/* Optionnel: Ajuster la hauteur des images pour qu'elles soient toutes identiques */
+.carousel .carousel-inner .carousel-item img {
+    height: 500px; /* Exemple de hauteur fixe */
+    object-fit: cover; /* Ajuster l'image sans la déformer */
+    border-radius: 5px;
+}
+
