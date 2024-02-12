@@ -1,7 +1,11 @@
 <?php
-// constantes
-require_once __DIR__ . '/../config/config.php';
 
+require_once __DIR__ . '/../config/config.php';
+require_once __DIR__ . '/../models/Client.php';
+require_once __DIR__ . '/../helpers/Database.php';
+require_once __DIR__ . '/../helpers/dd.php';
+
+// $error = [];
 //  Récupération du Formulaire
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //===================== Lastname : Nettoyage et validation =======================
@@ -39,17 +43,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     //===================== Mot de passe : Nettoyage et haschage =======================
-    $password1 = filter_input(INPUT_POST, 'password1');
+    $password = filter_input(INPUT_POST, 'password');
     $password2 = filter_input(INPUT_POST, 'password2');
     // Vérification de la non-vacuité des mots de passe
-    if (empty($password1) || empty($password2)) {
+    if (empty($password) || empty($password2)) {
         $error["password"] = "Les mots de passe ne peuvent pas être vides";
-    } elseif ($password1 != $password2) {
+    } elseif ($password != $password2) {
         // Vérification de la correspondance des mots de passe
         $error["password"] = "Les mots de passe ne correspondent pas";
     } else {
         // Hachage du mot de passe
-        $passwordHash = password_hash($password1, PASSWORD_DEFAULT);
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
         // Ici, vous pouvez continuer avec l'enregistrement du mot de passe haché
     }
     //======================== Email : Nettoyage et validation ============================
@@ -63,9 +67,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     //====================== verification de l'adresse voir la validation =============
-    $adress = filter_input(INPUT_POST, 'adress', FILTER_SANITIZE_SPECIAL_CHARS);
-    if (empty($adress)) {
-        $errors['adress'] = 'Le champ expérience est requis.';
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+    if (empty($address)) {
+        $errors['address'] = 'Le champ expérience est requis.';
     } 
     // ===================== vérification du téléphone =================================
     $phonenumber = filter_input(INPUT_POST, 'phonenumber', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -79,6 +83,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error["phonenumber"] = "Le numéro de téléphone n'est pas au bon format!!";
         }
     }
+            // Enregistrement en base de données
+            if (empty($error)) {
+                // Création d'un nouvel objet issu de la classe 'Client'
+                $newclient = new Client();
+                // Hydratation de notre objet
+                // $newclient->setIdUser($id_user);
+                $newclient->setLastName($lastname);
+                $newclient->setFirstName($firstname);
+                $newclient->setPassword($password);
+                $newclient->setEmail($email);
+                $newclient->setPhoneNumber($phonenumber);
+                $newclient->setAddress($address);
+                // dd($newclient);
+                    // Appel de la méthode insert
+                $isOk = $newclient->insert();
+                    // Si la méthode a retourné "true", alors on redirige vers la liste
+                if ($isOk) {
+                    header('location: /controllers/signup-ctrl.php');
+                    die;
+                }
+            }
 }
 
 include __DIR__ . '/../views/templates/header.php';

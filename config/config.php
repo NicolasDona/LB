@@ -7,3 +7,6 @@ define('REGEX_DATE','^([0-9]{4})[\/\-]?([0-9]{2})[\/\-]?([0-9]{2})$');
 define('REGEX_TEXTAREA','^[a-zA-Z\n\r]*$');
 define('MAX_FILESIZE', 2*1024*1024);
 define('AUTHORIZED_IMAGE_FORMAT', ['image/jpeg', 'image/png']);
+define('DSN', 'mysql:host=localhost;dbname=lb');
+define('USER', 'webmas');
+define('PASS', 'k2PC4u24^&FE6A7%YYqJ');

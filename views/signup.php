@@ -22,8 +22,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="password1" class="form-label regular">Mot de passe</label>
-                                <input type="password" class="form-control" id="password1" name="password1" value="<?= $password1 ?? ''; ?>" placeholder="Entrer votre mot de passe">
+                                <label for="password" class="form-label regular">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" name="password" value="<?= $password ?? ''; ?>" placeholder="Entrer votre mot de passe">
                                 <div id="nudge">
                                     <span class="badge  regular d-none">Faible</span>
                                     <span class="badge  regular d-none">Moyen</span>
@@ -56,8 +56,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-12">
-                                <label for="adress" class="regular">Adresse</label>
-                                <input id="adress" class="form-control" type="text" name="adress" value="<?= $adress ?? ''; ?>" placeholder="Entrer votre adresse">
+                                <label for="address" class="regular">Adresse</label>
+                                <input id="address" class="form-control" type="text" name="address" value="<?= $address ?? ''; ?>" placeholder="Entrer votre adresse">
                             </div>
                         </div>
                     </div>
