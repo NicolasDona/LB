@@ -155,13 +155,70 @@ class Client
         $sth->bindValue(':phonenumber', $this->getPhoneNumber());
         $sth->bindValue(':address', $this->getAddress());
         $sth->bindValue(':is_admin', $this->getIsAdmin(), PDO::PARAM_BOOL);
-        // $sth->bindValue(':created_at', $this->getCreatedAt());
-        // $sth->bindValue(':updated_at', $this->getUpdatedAt());
-        // $sth->bindValue(':archived_at', $this->getArchivedAt());
 
         $result = $sth->execute();
         return (bool) $sth->rowCount(); 
     }
+
+    public static function getAll(): array
+    {
+        $pdo = Database::connect();
+        $sql = 'SELECT * from `users` ORDER by `lastname`';
+        $sth = $pdo->query($sql);
+        $datas = $sth->fetchAll(PDO::FETCH_OBJ);
+        return $datas;
+    }
+
+    public static function delete($id_user): bool
+    {
+        $pdo = Database::connect();
+        $sql = 'DELETE FROM `users` WHERE `id_user` = :id_user;';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':id_user', $id_user);
+        $sth->execute();
+        if ($sth->rowCount() <= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public function update()
+    {
+        $pdo = Database::connect();
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // Requête mysql pour insérer des données
+        $sql = 'UPDATE users 
+                SET 
+                    `lastname` = :lastname, 
+                    `firstname` = :firstname,
+                    `email` = :email,
+                    `phonenumber` = :phonenumber,
+                    `address` = :address
+                WHERE `id_user` = :id_user';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':id_user', $this->getIdUser(), PDO::PARAM_INT);
+        $sth->bindValue(':lastname', $this->getLastname());
+        $sth->bindValue(':firstname', $this->getFirstname());
+        $sth->bindValue(':email', $this->getEmail());
+        $sth->bindValue(':phonenumber', $this->getPhoneNumber());
+        $sth->bindValue(':address', $this->getAddress());
+        $result = $sth->execute();
+        return $result;
+    }
+    public static function get(?int $id): object|false
+    {
+        $pdo = Database::connect();
+        $sql = 'SELECT * FROM `users` WHERE `id_user`=:id_user;';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':id_user', $id, PDO::PARAM_INT);
+        $sth->execute();
+        $result = $sth->fetch(PDO::FETCH_OBJ);
+        return $result;
+    }
+
 }
-// `created_at`, `updated_at`, `archived_at`
-// :created_at, :updated_at, :archived_at
+
+
+
+

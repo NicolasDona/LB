@@ -5,21 +5,18 @@
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-6">
-                        <label for="nameproduct" class="regular">Nom</label>
-                        <input id="nameproduct" class="form-control" type="text" name="nameproduct" value="<?= $nameproduct ?? ''; ?>" placeholder="Entrer le nom du produit">
-                        <span class="regular"><?= $error["nameproduct"] ?? '' ?></span>
+                        <label for="name" class="regular">Nom</label>
+                        <input id="name" class="form-control" type="text" name="name" value="<?= $name ?? ''; ?>" placeholder="Entrer le nom du produit">
+                        <span class="regular"><?= $error["name"] ?? '' ?></span>
                     </div>
                     <div class="col-md-6 mt-4">
                         <div class="mb-3">
-                            <span class="regular">&nbsp;Catégorie</span>
-                            <select name="" id="" class="select-style">
-                                <option selected value="femme">Femme</option>
-                                <option value="homme">Homme</option>
-                                <option value="enfant">Enfant</option>
-                            </select>
-                            <label for="productprice" class="regular"> Prix</label>
-                            <input id="productprice" class="price-style" type="text" size="10" name="productprice" value="<?= $productprice ?? ''; ?>" placeholder="Entrer le prix">
+                            <label for="price" class="regular"> Prix</label>
+                            <input id="price" class="price-style" type="text" size="10" name="price" value="<?= $productprice ?? ''; ?>" placeholder="Entrer le prix">
+                            <label for="stock" class="regular"> Prix</label>
+                            <input id="stock" class="price-style" type="text" size="10" name="stock" value="<?= $sotck; ?>" placeholder="Entrer le prix">
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -27,7 +24,7 @@
                 <div class="row">
                     <div class="col-12">
                         <label for="description" class="regular">Description</label>
-                        <textarea id="description" class="form-control" type="text" name="adress" value="<?= $description ?? ''; ?>" placeholder="Entrer la description du produit"></textarea>
+                        <textarea id="description" class="form-control" type="text" name="description" value="<?= $description ?? ''; ?>" placeholder="Entrer la description du produit"></textarea>
                     </div>
                 </div>
             </div>
