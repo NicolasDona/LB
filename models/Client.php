@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../helpers/Database.php';
 class Client
 {
 
@@ -66,7 +67,6 @@ class Client
     {
         $this->firstname = $firstname;
     }
-
     //-----------------PASSWORD-------------------
     public function getPassword(): string
     {
@@ -113,6 +113,7 @@ class Client
     {
         $this->address = $address;
     }
+
     // //---------------------CREATED_AT-------------- 
     // public function getCreatedAt(): ?string
     // {
@@ -216,7 +217,20 @@ class Client
         $result = $sth->fetch(PDO::FETCH_OBJ);
         return $result;
     }
-
+    public static function login(string $email)
+    {
+        $pdo = Database::connect();
+        $sql = 'SELECT * FROM `users` WHERE `email` = :email;';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':email', $email);
+        $sth->execute();
+        if ($sth->rowCount() <= 0) {
+            // il faut un autre retour qu'un booléen pour comparer la validité du mot de passe
+            return false;
+        } else {
+            return true;
+        }
+    }    
 }
 
 

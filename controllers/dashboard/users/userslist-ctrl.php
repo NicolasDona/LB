@@ -15,6 +15,6 @@ require_once __DIR__ . '/../../../helpers/dd.php';
 
 
 
-include __DIR__ . '/../../../views/templates/header.php';
+include __DIR__ . '/../../../views/templates/header_dashboard.php';
 include __DIR__ . '/../../../views/dashboard/users/userslist.php';
-include __DIR__ . '/../../../views/templates/footer.php';
+include __DIR__ . '/../../../views/templates/footer_dashboard.php';

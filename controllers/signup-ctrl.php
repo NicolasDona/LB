@@ -83,15 +83,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error["phonenumber"] = "Le numéro de téléphone n'est pas au bon format!!";
         }
     }
+    // dd($passwordHash);
             // Enregistrement en base de données
             if (empty($error)) {
                 // Création d'un nouvel objet issu de la classe 'Client'
                 $newclient = new Client();
                 // Hydratation de notre objet
-                // $newclient->setIdUser($id_user);
+                $newclient->setIdUser($id_user);
                 $newclient->setLastName($lastname);
                 $newclient->setFirstName($firstname);
-                $newclient->setPassword($password);
+                $newclient->setPassword($passwordHash);
                 $newclient->setEmail($email);
                 $newclient->setPhoneNumber($phonenumber);
                 $newclient->setAddress($address);

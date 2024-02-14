@@ -77,3 +77,5 @@
         </nav>
     </header>
     <main>
+    <h1 class="font-title fw-bold text-gold text-center"><a href="/controllers/dashboard/dashboard-ctrl.php" class="text-gold text-decoration-none hover-underline">DASHBOARD</a></h1>
+        
