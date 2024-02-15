@@ -217,7 +217,7 @@ class Client
         $result = $sth->fetch(PDO::FETCH_OBJ);
         return $result;
     }
-    public static function login(string $email)
+    public static function getByEmail(string $email)
     {
         $pdo = Database::connect();
         $sql = 'SELECT * FROM `users` WHERE `email` = :email;';
@@ -225,12 +225,12 @@ class Client
         $sth->bindValue(':email', $email);
         $sth->execute();
         if ($sth->rowCount() <= 0) {
-            // il faut un autre retour qu'un booléen pour comparer la validité du mot de passe
-            return false;
+            return false; // Aucun utilisateur trouvé
         } else {
-            return true;
+            return $sth->fetch(PDO::FETCH_ASSOC); // Retourne toute les informations de l'utilisateur sous forme d'un tableau
         }
-    }    
+    }
+
 }
 
 

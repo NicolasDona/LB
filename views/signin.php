@@ -12,8 +12,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="password1" class="form-label regular">Mot de passe</label>
-                            <input type="password" class="form-control" id="password1" name="password1" value="<?= $password1 ?? ''; ?>" placeholder="Entrer votre mot de passe">
+                            <label for="password" class="form-label regular">Mot de passe</label>
+                            <input type="password" class="form-control" id="password" name="password" value="<?= $password ?? ''; ?>" placeholder="Entrer votre mot de passe">
                             <span class="regular"><?= $error['password'] ?? '' ?></span>
                         </div>
                     </div>

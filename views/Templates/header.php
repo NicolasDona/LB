@@ -11,8 +11,7 @@
     <!-- Font Playfair Display class="font-title"  pour les titres -->
     <!-- font Lato class="regular" pour l'écriture régulière -->
     <!-- Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- style CSS perso -->
     <link rel="stylesheet" href="/public/assets/css/style.css">
     <title>LB Coiffure</title>
@@ -23,18 +22,14 @@
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="/controllers/main-ctrl.php"><img
-                        class="bar-logo" src="/public/assets/img/logo.png" alt="Logo du salon"></a>
-                <button class="navbar-toggler mob-menu" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="/controllers/main-ctrl.php"><img class="bar-logo" src="/public/assets/img/logo.png" alt="Logo du salon"></a>
+                <button class="navbar-toggler mob-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon navbar-dark mob-menu"></span>
                 </button>
                 <div class="collapse navbar-collapse mob-menu" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle regular text-decoration-none hover-underline fw-bold" href="#"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="dropdown-toggle regular text-decoration-none hover-underline fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Présentation du salon
                             </a>
                             <ul class="dropdown-menu">
@@ -45,8 +40,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page"
-                                href="/controllers/produits-ctrl.php">Produits</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page" href="/controllers/produits-ctrl.php">Produits</a>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/rdv-ctrl.php">RDV en ligne</a>
@@ -60,16 +54,21 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
+                        <?php if (!isset($_SESSION['id_user'])) : ?>
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signin-ctrl.php">Connexion</a>
+                            </li>
+                        <?php else : ?>
+                            <!-- Afficher un lien de déconnexion ou d'autres options pour l'utilisateur connecté -->
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
+                            </li>
+                        <?php endif; ?>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="/controllers/signin-ctrl.php">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="/controllers/dashboard/dashboard-ctrl.php">.</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/dashboard/dashboard-ctrl.php">.</a>
                         </li>
                     </ul>
                 </div>
