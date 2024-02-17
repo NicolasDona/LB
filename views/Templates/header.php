@@ -67,9 +67,6 @@
                                 <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
                             </li>
                         <?php endif; ?>
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/dashboard/dashboard-ctrl.php">.</a>
-                        </li>
                     </ul>
                 </div>
             </div>

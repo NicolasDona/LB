@@ -31,7 +31,7 @@
     </div>
     <!-- Mentions Légales -->
     <div class="text-center regular letter-sp">
-        <a class="regular text-decoration-none hover-underline fw-bold" href="#!">Mentions légales</a> © 2023
+        <a class="regular text-decoration-none hover-underline fw-bold" href="#!">Mentions légales</a> © 2024
         <a class="regular text-decoration-none hover-underline fw-bold" href="index.html"> LB Coiffure</a>
     </div>
 </footer>

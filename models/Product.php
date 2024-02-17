@@ -116,6 +116,8 @@ class Product
         $result = $sth->execute();
         return (bool) $sth->rowCount(); 
     }
+
+    
 }
 
 

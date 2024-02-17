@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -60,17 +61,19 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="/controllers/signin-ctrl.php">Connexion</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold"
-                                href="/controllers/dashboard/dashboard-ctrl.php">.</a>
-                        </li>
+                    <?php if (!isset($_SESSION['id_user'])) : ?>
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signin-ctrl.php">Connexion</a>
+                            </li>
+                        <?php else : ?>
+                            <!-- Afficher un lien de déconnexion ou d'autres options pour l'utilisateur connecté -->
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
+                            </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
             </div>
