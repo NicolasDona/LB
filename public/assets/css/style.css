@@ -104,7 +104,6 @@ hr {
 /* inscription */
 
 
-
 /* formulaire de contact */
 ::placeholder {
     font-size: 80%;
@@ -178,4 +177,9 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-
+.dash-icon {
+    font-size: 50px;
+}
+.btn-title-style {
+    font-size:medium;
+}

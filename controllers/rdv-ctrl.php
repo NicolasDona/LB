@@ -4,7 +4,10 @@ require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../helpers/dd.php';
 require_once __DIR__ . '/../models/Service.php';
 require_once __DIR__ . '/../models/Timeslot.php';
+require_once __DIR__ . '/../models/Appointment.php';
 
+
+$id_user = $_SESSION['id_user'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -33,8 +36,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $isOk = filter_var($service, FILTER_VALIDATE_REGEXP, array('options' =>array('regexp' => '/' . TIME . '/')));
     }
-
-
+// dd($timeslot);
+                // Enregistrement en base de données
+                if (empty($error)) {
+                    // Création d'un nouvel objet issu de la classe 'Client'
+                    $newrdv = new Appointment();
+                    // Hydratation de notre objet
+                    // $newrdv->setIdAppointment($id_appointment);
+                    $newrdv->setAppointmentDate($appointment_date);
+                    $newrdv->setIdUser($id_user);
+                    $newrdv->setIdTimeslot($timeslot);
+                        // Appel de la méthode insert
+                    $isOk = $newrdv->insert();
+                        // Si la méthode a retourné "true", alors on redirige vers la liste
+                    if ($isOk) {
+                        header('location: /controllers/rdv-ctrl.php');
+                        die;
+                    }
+                }
 
 }
 

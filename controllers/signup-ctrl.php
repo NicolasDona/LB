@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             // Dans ce cas précis, on vérifie aussi la longueur de chaine (on aurait pu le faire aussi direct dans la regex)
             if (strlen($firstname) <= 2 || strlen($firstname) >= 70) {
-                $error["firstname"] = "La longueur du nom n'est pas bon";
+                $error["firstname"] = "La longueur du prénom n'est pas bon";
             }
         }
     }
@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $error["phonenumber"] = "Le numéro de téléphone n'est pas au bon format!!";
         }
     }
-    // dd($passwordHash);
+
             // Enregistrement en base de données
             if (empty($error)) {
                 // Création d'un nouvel objet issu de la classe 'Client'
@@ -96,7 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $newclient->setEmail($email);
                 $newclient->setPhoneNumber($phonenumber);
                 $newclient->setAddress($address);
-                // dd($newclient);
                     // Appel de la méthode insert
                 $isOk = $newclient->insert();
                     // Si la méthode a retourné "true", alors on redirige vers la liste

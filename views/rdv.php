@@ -20,7 +20,7 @@
                         <span class="regular"><?= $error['service'] ?? '' ?></span>
                     </div>
                     <div class="col-md-4">
-                        <select name="slot" class="form-control">
+                        <select name="timeslot" id="timeslot" class="form-control">
                             <?php
                             $timeslots = Timeslot::getAll();
                             foreach ($timeslots as $timeslot) {

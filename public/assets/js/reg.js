@@ -3,7 +3,7 @@ let username = document.getElementById('username');
 let usernameHelp = document.getElementById('usernameHelp');
 let email = document.getElementById('email');
 let btn = document.querySelector('button[type="submit"]');
-let password1 = document.getElementById('password1');
+let password1 = document.getElementById('password');
 let password2 = document.getElementById('password2');
 let password2Help = document.getElementById('password2Help');
 // Selection des badges pour la force du mot de passe
@@ -80,8 +80,8 @@ const checkPassword = () => {
         return;
     }
 
-    if (password1.value !== password2.value) {
-        password1.classList.add('regular', 'border-3')
+    if (password.value !== password2.value) {
+        password.classList.add('regular', 'border-3')
         password2.classList.add('regular', 'border-3')
         password2Help.classList.remove('d-none');
     } else {
