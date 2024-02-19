@@ -71,6 +71,9 @@
                         <?php else : ?>
                             <!-- Afficher un lien de déconnexion ou d'autres options pour l'utilisateur connecté -->
                             <li class="nav-item">
+                                Bonjour <span class="bold"><?= $_SESSION['firstname'] ?></span>
+                            </li>
+                            <li class="nav-item">
                                 <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
                             </li>
                         <?php endif; ?>
