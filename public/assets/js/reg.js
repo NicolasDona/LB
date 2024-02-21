@@ -3,7 +3,7 @@ let username = document.getElementById('username');
 let usernameHelp = document.getElementById('usernameHelp');
 let email = document.getElementById('email');
 let btn = document.querySelector('button[type="submit"]');
-let password1 = document.getElementById('password');
+let password = document.getElementById('password');
 let password2 = document.getElementById('password2');
 let password2Help = document.getElementById('password2Help');
 // Selection des badges pour la force du mot de passe
@@ -68,7 +68,7 @@ const checkEmail = () => {
 const checkPassword = () => {
 
     // Dès qu'une touche est tapée, on reset tous les styles
-    password1.classList.remove('regular', 'border-success', 'border-3')
+    password.classList.remove('regular', 'border-success', 'border-3')
     password2.classList.remove('regular', 'border-success', 'border-3')
     
     light.classList.add('d-none')
@@ -76,7 +76,7 @@ const checkPassword = () => {
     strong.classList.add('d-none')
     password2Help.classList.add('d-none');
 
-    if (password1.value == '' && password2.value == '') {
+    if (password.value == '' && password2.value == '') {
         return;
     }
 
@@ -85,7 +85,7 @@ const checkPassword = () => {
         password2.classList.add('regular', 'border-3')
         password2Help.classList.remove('d-none');
     } else {
-        password1.classList.add('regular', 'border-3')
+        password.classList.add('regular', 'border-3')
         password2.classList.add('regular', 'border-3')
         password2Help.classList.add('d-none');
     }
@@ -94,13 +94,13 @@ const checkPassword = () => {
     // On commence par masquer la force dans le html
     light.classList.remove('d-none')
 
-    let nudgeMedium = regexPwdMedium.test(password1.value)
+    let nudgeMedium = regexPwdMedium.test(password.value)
     if (nudgeMedium) {
         light.classList.add('d-none')
         medium.classList.remove('d-none')
         strong.classList.add('d-none')
     }
-    let nudgeStrong = regexPwdStrong.test(password1.value)
+    let nudgeStrong = regexPwdStrong.test(password.value)
     if (nudgeStrong) {
         light.classList.add('d-none')
         medium.classList.add('d-none')
@@ -111,5 +111,5 @@ const checkPassword = () => {
 // // Création de 2 écouteurs d'évènement à l'appui sur une touche
 // username.addEventListener("keyup", checkUsername);
 email.addEventListener("keyup", checkEmail);
-password1.addEventListener("keyup", checkPassword);
+password.addEventListener("keyup", checkPassword);
 password2.addEventListener("keyup", checkPassword);

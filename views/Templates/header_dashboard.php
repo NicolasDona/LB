@@ -36,7 +36,7 @@
                                 <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Tarifs</a></li> -->
                                 <li><a class="dropdown-item" href="#">Services</a></li>
-                                <li><a class="dropdown-item" href="#">A propos</a></li>
+                                <li><a class="dropdown-item" href="/controllers/about.php">A propos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

@@ -36,7 +36,7 @@ $error =[];
     }
     $timeslot = intval(filter_input(INPUT_POST, 'timeslot', FILTER_SANITIZE_NUMBER_INT));
     if (empty($timeslot)) {
-        $error['service'] = "Vous devez choisir un horaire!";
+        $error['timeslot'] = "Vous devez choisir un horaire!";
     } else {
         $isOk = filter_var($service, FILTER_VALIDATE_REGEXP, array('options' => array('regexp' => '/' . TIME . '/')));
     }
@@ -49,8 +49,7 @@ $error =[];
                         $updateApp->setAppointmentDate($appointment_date);
                         $updateApp->setIdAppointment($id_appointment);
                         $updateApp->setIdTimeslot($timeslot);
-
-                            // Appel de la méthode insert
+                        // Appel de la méthode insert
                         $updateApp->update($service);
                         
                             // Si la méthode a retourné "true", alors on redirige vers la liste
