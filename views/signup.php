@@ -61,6 +61,11 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mb-2 form-check">
+                        <input type="checkbox" class="form-check-input" id="check" name="check" value="<?= $chek ?? ''; ?>">
+                        <label class="form-check-label regular" for="check"> En soumettant ce formulaire, j’accepte que mes informations soient utilisées exclusivement dans le cadre de ma demande et de la relation commerciale éthique et personnalisée qui pourrait en découler si je le souhaite.</label>
+                        <span class="regular"><?= $error['check'] ?? '' ?></span>
+                    </div>
                     <div class="mt-2">
                         <button class="btn btn-form">S'inscrire</button>
                     </div>

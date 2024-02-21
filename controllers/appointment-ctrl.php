@@ -36,21 +36,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $isOk = filter_var($service, FILTER_VALIDATE_REGEXP, array('options' =>array('regexp' => '/' . TIME . '/')));
     }
-// dd($timeslot);
+
                 // Enregistrement en base de données
                 if (empty($error)) {
-                    // Création d'un nouvel objet issu de la classe 'Client'
+                    // Création d'un nouvel objet issu de la classe 'Appointment'
                     $newrdv = new Appointment();
                     // Hydratation de notre objet
-                    // $newrdv->setIdAppointment($id_appointment);
                     $newrdv->setAppointmentDate($appointment_date);
                     $newrdv->setIdUser($id_user);
                     $newrdv->setIdTimeslot($timeslot);
                         // Appel de la méthode insert
-                    $isOk = $newrdv->insert();
+                    $isOk = $newrdv->insert($service);
                         // Si la méthode a retourné "true", alors on redirige vers la liste
                     if ($isOk) {
-                        header('location: /controllers/rdv-ctrl.php');
+                        header('location: /controllers/main-ctrl.php');
                         die;
                     }
                 }
@@ -58,5 +57,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 include __DIR__ . '/../views/templates/header.php';
-include __DIR__ . '/../views/rdv.php';
+include __DIR__ . '/../views/appointment.php';
 include __DIR__ . '/../views/templates/footer.php';

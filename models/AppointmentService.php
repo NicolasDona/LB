@@ -22,4 +22,18 @@ class AppointmentService {
         $this->id_service = $id_service;
     }
 
+    public static function delete($id_appointment): bool
+    {
+        $pdo = Database::connect();
+        $sql = 'DELETE FROM `appointments_services` WHERE `id_appointment` = :id_appointment;';
+        $sth = $pdo->prepare($sql);
+        $sth->bindValue(':id_appointment', $id_appointment);
+        $sth->execute();
+        if ($sth->rowCount() <= 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once __DIR__ . '/../../../config/config.php';
 require_once __DIR__ . '/../../../models/Client.php';
 require_once __DIR__ . '/../../../helpers/Database.php';
@@ -91,6 +92,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
     }
 
-include __DIR__ . '/../../../views/templates/header.php';
+include __DIR__ . '/../../../views/templates/header_dashboard.php';
 include __DIR__ . '/../../../views/dashboard/users/update.php';
-include __DIR__ . '/../../../views/templates/footer.php';
+include __DIR__ . '/../../../views/templates/footer_dashboard.php';

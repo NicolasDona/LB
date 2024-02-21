@@ -1,10 +1,17 @@
 <?php
+
 require_once __DIR__ . '/../config/config.php';
 
-class Database {
-    // méthode connect statique : sans new databse 
-    public static function connect () {
-        $pdo = new PDO(DSN, USER, PASS);
-        return $pdo;
+class Database
+{
+    private static $pdo;
+
+    public static function connect()
+    {
+        if(is_null(self::$pdo)) {
+            self::$pdo = new PDO(DSN, USER, PASS);
+            self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+        }
+        return self::$pdo;
     }
 }

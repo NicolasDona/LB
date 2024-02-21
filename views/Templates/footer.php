@@ -10,15 +10,15 @@
                     Je suis disponible pour répondre à toutes vos demandes personnalisées.
                     Contactez-moi.
                 </p>
-                <a href="https://www.facebook.com/profile.php?id=100063458413249" target="_blank"><i class="fa-brands fa-facebook footer-icons" title="Facebook"></i></a>
-                <a href="https://www.instagram.com/lbcoiffure60/" target="_blank"><i class="fa-brands fa-instagram footer-icons" title="Instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063458413249" target="_blank"><i class="fa-brands fa-facebook footer-icons" title="Facebook" alt="icone facebook"></i></a>
+                <a href="https://www.instagram.com/lbcoiffure60/" target="_blank"><i class="fa-brands fa-instagram footer-icons" title="Instagram" alt="icone instagram"></i></a>
             </div>
             <!-- Partie centrale -->
             <div class="col-lg-3 col-md-6">
                 <h5 class="mb-3 font-title fw-bold">Venir au salon</h5>
                 <p class="regular">265 Rue Albert Martin,<br>60250 Bury</p>
                 <p><a href="https://maps.app.goo.gl/Cm3oM6qB7F58ya2E9" target="_blank" title="lien vers le plan de Google maps" class="regular text-decoration-none hover-underline fw-bold">Plans</a></p>
-                <p><a href="#!" title="lien vers la grille de tarifs" class="regular text-decoration-none hover-underline fw-bold">Tarifs</a></p>
+                <p><a href="mailto:oboulard@gmail.com" title="lien de contact" class="regular text-decoration-none hover-underline fw-bold">Contact</a></p>
                 <p><a href="tel:0344565269" title="Lien du numéro de téléphone" class="regular text-decoration-none hover-underline fw-bold">03 44 56 52 69</a></p>
             </div>
             <!-- Partie Droite  -->

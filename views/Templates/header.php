@@ -34,23 +34,19 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
-                                <li><a class="dropdown-item" href="#">Tarifs</a></li>
+                                <!-- <li><a class="dropdown-item" href="#">Tarifs</a></li> -->
                                 <li><a class="dropdown-item" href="#">Services</a></li>
-                                <li><a class="dropdown-item" href="#">A propos</a></li>
+                                <li><a class="dropdown-item" href="/controllers/about.php">A propos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page" href="/controllers/produits-ctrl.php">Produits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/rdv-ctrl.php">RDV en ligne</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/avantages-ctrl.php">Avantages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/contact-ctrl.php">Nous
-                                contacter</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="mailto:oboulard@gmail.com">Nous contacter</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
@@ -65,6 +61,9 @@
                             <!-- Afficher un lien de déconnexion ou d'autres options pour l'utilisateur connecté -->
                             <li class="nav-item">
                                 Bonjour <span class="bold"><?= $_SESSION['firstname'] ?></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/appointment-ctrl.php">RDV en ligne</a>
                             </li>
                             <li class="nav-item">
                                 <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
