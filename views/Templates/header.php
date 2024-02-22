@@ -35,8 +35,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Tarifs</a></li> -->
-                                <li><a class="dropdown-item" href="#">Services</a></li>
-                                <li><a class="dropdown-item" href="/controllers/about.php">A propos</a></li>
+                                <li><a class="dropdown-item" href="/controllers/offering-ctrl.php">Services</a></li>
+                                <li><a class="dropdown-item" href="/controllers/about-ctrl.php">A propos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">

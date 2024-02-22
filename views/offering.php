@@ -15,13 +15,20 @@ Services Complémentaires
 Manucure et pédicure : Soin des ongles, vernis classique ou semi-permanent.
 Soins du visage : Nettoyages, hydratation, traitements anti-âge, etc.
 Maquillage : Services de maquillage pour le quotidien ou des occasions spéciales. -->
-<h1 class="font-title text-center fw-bold mt-5">À propos de nous</h1>
+<h1 class="font-title text-center fw-bold mt-5">SERVICES</h1>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 regular">
-            <div class="mt-5 mb-5">
-            <p>
-            </p>
+            <div class="mt-5 mb-5 text-center">
+                <p>
+                <h2>Services de Coiffure</h2><br>
+                <span class="bold">Coupe de cheveux :</span> Coupe personnalisée pour femmes, hommes et enfants.<br>
+                <span class="bold">Coloration :</span> Teinture complète, mèches, balayage, ombré, etc.<br>
+                <span class="bold">Soins capillaires :</span> Traitements hydratants, réparateurs, masques capillaires,<br> et soins spécifiques comme le lissage brésilien.<br>
+                <span class="bold">Coiffure et mise en plis :</span> Brushing, coiffures pour événements (mariages, soirées), chignons, etc.<br>
+                <span class="bold">Extensions de cheveux :</span> Ajout de longueur ou de volume avec des extensions.<br>
+                <span class="bold">Conseil en image :</span> Analyse et conseils pour trouver le style et la couleur adaptés à chaque personne.<br>
+                </p>
             </div>
         </div>
     </div>
