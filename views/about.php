@@ -23,7 +23,7 @@
             <p>
                 Nous sommes fiers de faire partie intégrante de l'histoire de Bury et de continuer à écrire les pages de cette belle
                 aventure. Venez découvrir par vous-même pourquoi notre salon est <br>tant apprécié et comment nous contribuons à faire de 
-                chaque visite une expérience mémorable.
+                chaque visite une expérience unique.
             </p>
             </div>
         </div>
