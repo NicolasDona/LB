@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once __DIR__ . '/../config/config.php';
 require_once __DIR__ . '/../models/Client.php';
 require_once __DIR__ . '/../helpers/Database.php';
@@ -100,6 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $isOk = $newclient->insert();
                     // Si la méthode a retourné "true", alors on redirige vers la liste
                 if ($isOk) {
+                    $_SESSION['success_message'] = "Inscription réussie ! Vous pouvez maintenant vous connecter.";
                     header('location: /controllers/signup-ctrl.php');
                     die;
                 }
@@ -108,5 +109,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 include __DIR__ . '/../views/templates/header.php';
 include __DIR__ . '/../views/signup.php';
-include __DIR__ . '/../views/templates/footer.php';
-
+include __DIR__ . '/../views/templates/footer_signup.php';

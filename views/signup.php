@@ -1,4 +1,12 @@
         <h1 class="font-title text-center fw-bold mt-5">INSCRIPTION</h1>
+            <?php
+            // Vérifier si la variable de session existe et l'afficher si c'est le cas
+            if (isset($_SESSION['success_message'])) {
+                echo '<div class="alert alert-success text-center">' . $_SESSION['success_message'] . '</div>';
+                // Supprimer la variable de session après l'avoir affichée
+                unset($_SESSION['success_message']);
+            }
+            ?>
         <div class="row pt-3 mb-5">
             <div class="col-lg-8 offset-lg-2 col-12 pt-5">
                 <form method="POST" id="formUser">
