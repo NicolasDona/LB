@@ -31,11 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['firstname'] = $user['firstname'];
             // Rediriger vers le tableau de bord pour les administrateurs
             if ($user['is_admin']) {
-                header('Location: /controllers/dashboard/dashboard-ctrl.php');
+                header('Location: /lb/controllers/dashboard/dashboard-ctrl.php');
                 exit;
             } else {
                 // Redirection vers la page principale pour les utilisateurs non-administrateurs
-                header('Location: /controllers/main-ctrl.php');
+                header('Location: /lb/controllers/main-ctrl.php');
                 exit;
             }
         } else {

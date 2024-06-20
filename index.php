@@ -1,3 +1,3 @@
 <?php
-    header('location: /controllers/main-ctrl.php');
+    header('location: /lb/controllers/main-ctrl.php');
     die;

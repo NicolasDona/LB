@@ -20,7 +20,7 @@ try {
     }
     // Sessions flashs
     $_SESSION['msg'] = $msg;
-    header('location: /controllers/dashboard/users/userslist-ctrl.php');
+    header('location: /lb/controllers/dashboard/users/userslist-ctrl.php');
     die;
     
 } catch (PDOException $e) {

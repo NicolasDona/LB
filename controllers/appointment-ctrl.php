@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $isOk = $newrdv->insert($service);
                         // Si la méthode a retourné "true", alors on redirige vers la liste
                     if ($isOk) {
-                        header('location: /controllers/main-ctrl.php');
+                        header('location: /lb/controllers/main-ctrl.php');
                         die;
                     }
                 }

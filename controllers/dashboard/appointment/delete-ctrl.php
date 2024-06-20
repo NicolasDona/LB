@@ -21,7 +21,7 @@ try {
     }
     // Sessions flashs
     $_SESSION['msg'] = $msg;
-    header('location: /controllers/dashboard/appointment/appointlist-ctrl.php');
+    header('location: /lb/controllers/dashboard/appointment/appointlist-ctrl.php');
     die;
     
 } catch (PDOException $e) {

@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     // Si la méthode a retourné "true", alors on redirige vers la liste
                 if ($isOk) {
                     $_SESSION['success_message'] = "Inscription réussie ! Vous pouvez maintenant vous connecter.";
-                    header('location: /controllers/signup-ctrl.php');
+                    header('location: /lb/controllers/signup-ctrl.php');
                     die;
                 }
             }

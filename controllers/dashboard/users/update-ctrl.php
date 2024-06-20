@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $isOk = $newclient->update();
                         // Si la méthode a retourné "true", alors on redirige vers la liste
                     if ($isOk) {
-                        header('location: /controllers/dashboard/users/userslist-ctrl.php');
+                        header('location: /lb/controllers/dashboard/users/userslist-ctrl.php');
                         die;
                     }
                 }

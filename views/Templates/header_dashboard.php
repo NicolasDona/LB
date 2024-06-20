@@ -13,7 +13,7 @@
     <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- style CSS perso -->
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="/lb/public/assets/css/style.css">
     <title>LB Coiffure</title>
 </head>
 
@@ -22,7 +22,7 @@
         <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="/controllers/main-ctrl.php"><img class="bar-logo" src="/public/assets/img/logo.png" alt="Logo du salon"></a>
+                <a class="navbar-brand regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/main-ctrl.php"><img class="bar-logo" src="/lb/public/assets/img/logo.png" alt="Logo du salon"></a>
                 <button class="navbar-toggler mob-menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon navbar-dark mob-menu"></span>
                 </button>
@@ -33,18 +33,18 @@
                                 Présentation du salon
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/controllers/photos-ctrl.php">Photos</a></li>
+                                <li><a class="dropdown-item" href="/lb/controllers/photos-ctrl.php">Photos</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Tarifs</a></li> -->
-                                <li><a class="dropdown-item" href="/controllers/offering-ctrl.php">Services</a></li>
-                                <li><a class="dropdown-item" href="/controllers/about-ctrl.php">A propos</a></li>
+                                <li><a class="dropdown-item" href="/lb/controllers/offering-ctrl.php">Services</a></li>
+                                <li><a class="dropdown-item" href="/lb/controllers/about-ctrl.php">A propos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page" href="/controllers/produits-ctrl.php">Produits</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" aria-current="page" href="/lb/controllers/produits-ctrl.php">Produits</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/avantages-ctrl.php">Avantages</a>
+                            <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/avantages-ctrl.php">Avantages</a>
                         </li>
                         <li class="nav-item">
                             <a class="regular text-decoration-none hover-underline fw-bold" href="mailto:oboulard@gmail.com">Nous
@@ -54,10 +54,10 @@
                     <ul class="navbar-nav ms-auto"> <!--Ajustement d'Inscription et Connexion-->
                         <?php if (!isset($_SESSION['id_user'])) : ?>
                             <li class="nav-item">
-                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signup-ctrl.php">Inscription</a>
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/signup-ctrl.php">Inscription</a>
                             </li>
                             <li class="nav-item">
-                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/signin-ctrl.php">Connexion</a>
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/signin-ctrl.php">Connexion</a>
                             </li>
                         <?php else : ?>
                             <!-- Afficher un lien de déconnexion ou d'autres options pour l'utilisateur connecté -->
@@ -65,13 +65,13 @@
                                 Bonjour <span class="bold"><?= $_SESSION['firstname'] ?></span>
                             </li>
                             <li class="nav-item">
-                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/dashboard/dashboard-ctrl.php">Dashboard</a>
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/dashboard/dashboard-ctrl.php">Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/appointment-ctrl.php">RDV en ligne</a>
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/appointment-ctrl.php">RDV en ligne</a>
                             </li>
                             <li class="nav-item">
-                                <a class="regular text-decoration-none hover-underline fw-bold" href="/controllers/logout-ctrl.php">Déconnexion</a>
+                                <a class="regular text-decoration-none hover-underline fw-bold" href="/lb/controllers/logout-ctrl.php">Déconnexion</a>
                             </li>
                         <?php endif; ?>
                     </ul>
@@ -80,4 +80,4 @@
         </nav>
     </header>
     <main>
-        <h1 class="font-title fw-bold text-gold text-center"><a href="/controllers/dashboard/dashboard-ctrl.php" class="text-gold text-decoration-none hover-underline">DASHBOARD</a></h1>
+        <h1 class="font-title fw-bold text-gold text-center"><a href="/lb/controllers/dashboard/dashboard-ctrl.php" class="text-gold text-decoration-none hover-underline">DASHBOARD</a></h1>

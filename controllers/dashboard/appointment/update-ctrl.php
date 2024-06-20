@@ -54,7 +54,7 @@ $error =[];
                         
                             // Si la méthode a retourné "true", alors on redirige vers la liste
                         if ($isOk) {
-                            header('location: /controllers/dashboard/appointment/appointlist-ctrl.php');
+                            header('location: /lb/controllers/dashboard/appointment/appointlist-ctrl.php');
                             die;
                         }
                     }
